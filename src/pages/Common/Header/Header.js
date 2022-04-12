@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import logo from '../../../images/logo.png';
+import logo from '../../../images/logo-black.png';
 
 const Header = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand href="#home">
                         <img

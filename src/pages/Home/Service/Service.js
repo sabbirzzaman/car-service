@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
 
 const Service = ({ service }) => {
     const { name, description, img } = service;
