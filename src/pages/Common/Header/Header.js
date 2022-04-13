@@ -1,9 +1,11 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../images/logo-black.png';
 
 const Header = () => {
+    const navigate = useNavigate();
+
     return (
         <>
             <Navbar sticky='top' className='shadow' collapseOnSelect expand="lg" bg="light" variant="light">
@@ -12,15 +14,13 @@ const Header = () => {
                         <img height={30} src={logo} alt="Site logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
+                <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="home#home">Home</Nav.Link>
-                            <Nav.Link href="home#services">Services</Nav.Link>
-                            <Nav.Link href="home#experts">Experts</Nav.Link>
+                            <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
-                            <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                            <Button onClick={() =>navigate('login')}>Login</Button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

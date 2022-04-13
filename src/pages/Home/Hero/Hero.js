@@ -6,7 +6,7 @@ import banner3 from '../../../images/banner/banner3.jpg';
 
 const Hero = () => {
     return (
-        <Carousel id='home'>
+        <Carousel>
             <Carousel.Item>
                 <img
                     className="d-block w-100"

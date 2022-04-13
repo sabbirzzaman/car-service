@@ -4,3 +4,17 @@
         justify-content: flex-end;
     }
 }
+
+@media (max-width: 768px) {
+    .register .form,
+    .login .form {
+        width: 75% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .register .form,
+    .login .form {
+        width: 100% !important;
+    }
+}

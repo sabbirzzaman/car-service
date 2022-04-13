@@ -18,7 +18,7 @@ const Experts = () => {
     ];
 
     return (
-        <div id='experts' className="bg-white">
+        <div className="bg-white">
             <div className="container py-5">
                 <div className="title">
                     <h2>Our Experts</h2>
