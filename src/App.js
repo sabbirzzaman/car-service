@@ -4,6 +4,8 @@ import About from './pages/About/About/About';
 import Footer from './pages/Common/Footer/Footer';
 import Header from './pages/Common/Header/Header';
 import Home from './pages/Home/Home/Home';
+import Login from './pages/Login/Login/Login';
+import Register from './pages/Login/Register/Register';
 
 function App() {
     return (
@@ -11,8 +13,10 @@ function App() {
             <Header></Header>
             <Routes>
                 <Route path="/" element={<Home></Home>}></Route>
-                <Route path="/home" element={<Home></Home>}></Route>
-                <Route path="/about" element={<About></About>}></Route>
+                <Route path="home" element={<Home></Home>}></Route>
+                <Route path="about" element={<About></About>}></Route>
+                <Route path='login' element={<Login></Login>}></Route>
+                <Route path='register' element={<Register></Register>}></Route>
             </Routes>
             <Footer></Footer>
         </div>

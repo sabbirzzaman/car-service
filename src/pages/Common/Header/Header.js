@@ -1,31 +1,26 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../../images/logo-black.png';
 
 const Header = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+            <Navbar sticky='top' className='shadow' collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home">
-                        <img
-                            src={logo}
-                            height="30"
-                            className="d-inline-block align-top"
-                            alt="React Bootstrap logo"
-                        />
+                    <Navbar.Brand as={Link} to="/">
+                        <img height={30} src={logo} alt="Site logo" />
                     </Navbar.Brand>
-
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse
-                        className="header-nav"
-                        id="responsive-navbar-nav"
-                    >
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="home#home">Home</Nav.Link>
+                            <Nav.Link href="home#services">Services</Nav.Link>
+                            <Nav.Link href="home#experts">Experts</Nav.Link>
+                        </Nav>
                         <Nav>
-                            <Nav.Link to="/home">Home</Nav.Link>
-                            <Nav.Link eventKey={2} to="/about">
-                                About
-                            </Nav.Link>
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/login">Login</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
